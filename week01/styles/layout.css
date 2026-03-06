@@ -10,7 +10,7 @@ body {
 
 header {
     grid-area: header;
-    background-color: #f8f8f8;
+    background-color: #02362c;
     padding: 20px;
     text-align: center;
 }
@@ -18,14 +18,14 @@ header {
 
 main {
     grid-area: main;
-    background-color: #ffffff;
+    background-color: #982020;
     padding: 20px;
 }   
 
 
 aside {
     grid-area: aside;
-    background-color: #f0f0f0;
+    background-color: #183172;
     padding: 20px;
 }
 
