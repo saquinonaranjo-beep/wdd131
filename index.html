@@ -6,8 +6,11 @@
     <title>WDD 131 - Dynamic Web Fundamentals - Sergio Aquino</title>
     <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Sergio Aquino -learning web development, HTML, CSS, JavaScript, fundamentals, web design, web development, responsive design, user experience, front-end development, back-end development, full-stack development">
     <meta name="author" content="Sergio Aquino">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/base.css">
     <script src="scripts/getdates.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -23,8 +26,13 @@
         <h1>Sergio Aquino</h1>
         <section class="card">
             <h2>About Me</h2>
-            <img src="images/profile-sergio.jpg" alt="Sergio Aquino">
+            <img src="images/profile-sergio.jpg" alt="Sergio Aquino" width="200">
             <p>I am a passionate web developer with a strong foundation in HTML, CSS, and JavaScript. I enjoy creating dynamic and user-friendly websites.</p>
+        </section>
+        <section class="card">
+             <h2>My Interests</h2>
+            <img src="images/coding.jpg" alt="Coding image" width="200">
+            <p>I enjoy learning programming and improving my software development skills.</p>
         </section>
 
 
@@ -32,8 +40,9 @@
 
     <footer>
         <p>
-          &copy; <span id="currentyear">2023</span> | Sergio Aquino | Mexico 
+          &copy; <span id="currentyear"></span> | Sergio Aquino | Mexico 
         </p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 </html>
