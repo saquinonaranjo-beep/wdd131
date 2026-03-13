@@ -3,6 +3,9 @@ const button = document.querySelector('button');
 const list = document.querySelector('#list');
 
 button.addEventListener("click", function() {   
+    
+    if(input.value.trim() !== '') {
+    
     const li = document.createElement("li");
     const deleteButton = document.createElement('button');
    
@@ -11,9 +14,11 @@ button.addEventListener("click", function() {
     
     deleteButton.textContent = '❌';
     deleteButton.setAttribute('aria-label', `Remove ${input.value}`);
+    
 
     deleteButton.addEventListener('click', function() {
         list.removeChild(li);
+        input.focus();
     });
     
     li.append(deleteButton);
@@ -21,4 +26,5 @@ button.addEventListener("click", function() {
 
     input.value = '';
     input.focus();
+    }
 })
