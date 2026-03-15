@@ -1,4 +1,4 @@
-@media screen and (min-width: 768px){
+@media screen and (min-width:768px){
 
 #menuButton{
 display:none;
@@ -11,6 +11,10 @@ flex-direction:row;
 
 .container{
 grid-template-columns:repeat(3,1fr);
+}
+
+nav a{
+padding:15px;
 }
 
 }
