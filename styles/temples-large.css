@@ -7,14 +7,12 @@ display:none;
 #navMenu{
 display:flex;
 flex-direction:row;
+justify-content:flex-end;
+gap:20px;
 }
 
 .container{
 grid-template-columns:repeat(3,1fr);
-}
-
-nav a{
-padding:15px;
 }
 
 }
