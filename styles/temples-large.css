@@ -4,10 +4,19 @@
 display:none;
 }
 
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav{
+margin-left:auto;
+}
+
 #navMenu{
 display:flex;
 flex-direction:row;
-justify-content:flex-end;
 gap:20px;
 }
 
