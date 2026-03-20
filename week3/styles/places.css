@@ -1,0 +1,84 @@
+:root {
+  --main-color: #006847;   /* green */
+  --accent-color: #ce1126; /* red */
+  --light-bg: rgba(255, 255, 255, 0.85);
+}
+
+/* RESET */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+  background: var(--main-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* IMAGE */
+picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* SECTIONS */
+section {
+  margin: 1rem;
+  padding: 1rem;
+  background: #f4f4f4;
+  border-radius: 8px;
+}
+
+/* WEATHER ICON (mobile) */
+.weather-icon {
+  width: 50px;
+}
+
+/* FOOTER */
+footer {
+  background: var(--accent-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ========================= */
+/* DESKTOP (REQUIRED PART)   */
+/* ========================= */
+
+@media (min-width: 768px) {
+
+  main {
+    position: relative;
+  }
+
+  .data {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 250px;
+    background: var(--light-bg);
+  }
+
+  .weather {
+    position: absolute;
+    bottom: 20%;
+    right: 5%;
+    width: 250px;
+    background: var(--light-bg);
+  }
+
+  /* REQUIRED pseudo-element */
+  .weather h2::after {
+    content: " ⛅";
+  }
+
+  /* Hide SVG on desktop */
+  .weather-icon {
+    display: none;
+  }
+}
