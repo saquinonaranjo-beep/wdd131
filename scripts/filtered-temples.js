@@ -9,7 +9,7 @@ menuButton.addEventListener("click", () => {
 
 // FOOTER
 document.getElementById("currentYear").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
+document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
 
 // TEMPLE ARRAY
 const temples = [
@@ -62,8 +62,6 @@ const temples = [
     area: 116642,
     imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
-
-  // EXTRA 3 REQUIRED
   {
     templeName: "Salt Lake Temple",
     location: "Utah, United States",
@@ -87,6 +85,9 @@ const temples = [
   }
 ];
 
+// HELPER FUNCTION (FIXES DATE BUG)
+const getYear = (dateString) => parseInt(dateString.split(",")[0]);
+
 // DISPLAY FUNCTION
 const container = document.querySelector(".container");
 
@@ -97,11 +98,11 @@ function displayTemples(list) {
     const card = document.createElement("section");
 
     card.innerHTML = `
-      <h3>${t.templeName}</h3>
+      <h2>${t.templeName}</h2>
       <p><strong>Location:</strong> ${t.location}</p>
       <p><strong>Dedicated:</strong> ${t.dedicated}</p>
       <p><strong>Area:</strong> ${t.area.toLocaleString()} sq ft</p>
-      <img src="${t.imageUrl}" alt="${t.templeName}" loading="lazy">
+      <img src="${t.imageUrl}" alt="Image of ${t.templeName} Temple" loading="lazy">
     `;
 
     container.appendChild(card);
@@ -115,10 +116,10 @@ displayTemples(temples);
 document.getElementById("home").onclick = () => displayTemples(temples);
 
 document.getElementById("old").onclick = () =>
-  displayTemples(temples.filter(t => new Date(t.dedicated).getFullYear() < 1900));
+  displayTemples(temples.filter(t => getYear(t.dedicated) < 1900));
 
 document.getElementById("new").onclick = () =>
-  displayTemples(temples.filter(t => new Date(t.dedicated).getFullYear() > 2000));
+  displayTemples(temples.filter(t => getYear(t.dedicated) > 2000));
 
 document.getElementById("large").onclick = () =>
   displayTemples(temples.filter(t => t.area > 90000));
