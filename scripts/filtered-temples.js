@@ -82,7 +82,23 @@ const temples = [
     dedicated: "1980, October, 27",
     area: 53997,
     imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/tokyo-japan-temple/tokyo-japan-temple-26340-main.jpg"
+  },
+  {
+    templeName: "Mexico City Mexico",
+    location: "Mexico City, Mexico",
+    dedicated: "1983, December, 2",
+    area: 116642,
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/mexico-city-mexico-temple/mexico-city-mexico-temple-4060-main.jpg"
+  },
+  {
+    templeName: "Guadalajara Mexico",
+    location: "Guadalajara, Mexico",
+    dedicated: "2001, April, 29",
+    area: 116642,
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/_temp/105-Guadalajara-Mexico-Temple.jpg"
   }
+
+
 ];
 
 // HELPER FUNCTION (FIXES DATE BUG)
