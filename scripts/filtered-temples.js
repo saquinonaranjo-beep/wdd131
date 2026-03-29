@@ -67,21 +67,21 @@ const temples = [
     location: "Utah, United States",
     dedicated: "1893, April, 6",
     area: 253000,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-utah/400x250/salt-lake-temple-37762.jpg"
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-15669-main.jpg"
   },
   {
     templeName: "Paris France",
     location: "Paris, France",
     dedicated: "2017, May, 21",
     area: 44000,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/paris-france/400x250/paris-france-temple-lds-1879556-wallpaper.jpg"
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/paris-france-temple/paris-france-temple-2056-main.jpg"
   },
   {
     templeName: "Tokyo Japan",
     location: "Tokyo, Japan",
     dedicated: "1980, October, 27",
     area: 53997,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/400x250/tokyo-temple-lds-782194-wallpaper.jpg"
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/tokyo-japan-temple/tokyo-japan-temple-26340-main.jpg"
   }
 ];
 
