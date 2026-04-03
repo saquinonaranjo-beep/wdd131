@@ -15,6 +15,29 @@
         </select>
 
     </form>
+
+    <p>Overall Rating:</p>
+        <label><input type="radio" name="rating" value="1" required> 1 ⭐</label>
+        <label><input type="radio" name="rating" value="2"> 2 ⭐</label>
+        <label><input type="radio" name="rating" value="3"> 3 ⭐</label>
+        <label><input type="radio" name="rating" value="4"> 4 ⭐</label>
+        <label><input type="radio" name="rating" value="5"> 5 ⭐</label>
+
+        <label for="date">Date of Installation:</label>
+        <input type="date" id="date" name="date" required>
+
+    <p>Useful Features:</p>
+        <label><input type="checkbox" name="features" value="easy"> Easy to Use</label>
+        <label><input type="checkbox" name="features" value="design"> Good Design</label>
+        <label><input type="checkbox" name="features" value="fast"> Fast Performance</label>
+
+        <label for="review">Written Review:</label>
+        <textarea id="review" name="review"></textarea>
+
+        <label for="username">Your Name:</label>
+        <input type="text" id="username" name="username">
+        <input type="submit" value="Submit Review">
+        
     <script src="js/script.js"></script>
 </body>
 </html>
