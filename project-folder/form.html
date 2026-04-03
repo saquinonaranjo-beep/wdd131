@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Submit a product review form including rating, features, and feedback.">
+    <meta name="author" content="Sergio Aquino">
     <title>Product Review</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-    <h1>Product Review Form</h1>
+    <header>
+        <h1>Product Review Form</h1>
+    </header>
     <form method="get" action="review.html">
         <label for="product">Product Name</label>
         <select id="product" name="product" required>
@@ -15,19 +20,43 @@
         </select>
 
     <p>Overall Rating:</p>
-        <label><input type="radio" name="rating" value="1" required> 1 ⭐</label>
-        <label><input type="radio" name="rating" value="2"> 2 ⭐</label>
-        <label><input type="radio" name="rating" value="3"> 3 ⭐</label>
-        <label><input type="radio" name="rating" value="4"> 4 ⭐</label>
-        <label><input type="radio" name="rating" value="5"> 5 ⭐</label>
 
-        <label for="date">Date of Installation:</label>
-        <input type="date" id="date" name="date" required>
+        <label for="rating1">
+            <input type="radio" id="rating1" name="rating" value="1" required> 1 ⭐
+        </label>
+
+        <label for="rating2">
+            <input type="radio" id="rating2" name="rating" value="2" required> 2 ⭐
+        </label>
+
+        <label for="rating3">
+            <input type="radio" id="rating3" name="rating" value="3" required> 3 ⭐
+        </label>
+
+        <label for="rating4">
+            <input type="radio" id="rating4" name="rating" value="4" required> 4 ⭐
+        </label>
+
+        <label for="rating5">
+            <input type="radio" id="rating5" name="rating" value="5" required> 5 ⭐
+        </label>
 
     <p>Useful Features:</p>
-        <label><input type="checkbox" name="features" value="easy"> Easy to Use</label>
-        <label><input type="checkbox" name="features" value="design"> Good Design</label>
-        <label><input type="checkbox" name="features" value="fast"> Fast Performance</label>
+        <label for="easy">
+            <input type="checkbox" id="easy" name="features" value="easy"> Easy to Use
+        </label>
+
+        <label for="design">
+            <input type="checkbox" id="design" name="features" value="design"> Good Design
+        </label>
+
+        <label for="fast">
+            <input type="checkbox" id="fast" name="features" value="fast"> Fast Performance
+        </label>
+
+        <label for="durability">
+        <input type="checkbox" id="durability" name="features" value="durability"> Durability
+        </label>
 
         <label for="review">Written Review:</label>
         <textarea id="review" name="review"></textarea>
@@ -35,11 +64,14 @@
         <label for="username">Your Name:</label>
         <input type="text" id="username" name="username">
         <input type="submit" value="Submit Review">
+
+
     </form>
 
-    <script src="js/script.js"></script>
+
     <footer>
         <p>&copy; 2024 Sergio Aquino. All rights reserved.</p>
     </footer>
 </body>
 </html>
+
