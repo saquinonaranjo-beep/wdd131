@@ -1,4 +1,4 @@
-// PRODUCTS ARRAY
+// PRODUCTS ARRAY (objects)
 const products = [
     { name: "Silver Ring", price: 25 },
     { name: "Silver Necklace", price: 40 },
@@ -7,11 +7,11 @@ const products = [
 
 // DISPLAY PRODUCTS
 function displayProducts() {
-    const container = document.querySelector(".container");
+    const container = document.getElementById("product-list");
 
     if (!container) return;
 
-    let html = '<div class="product-grid">';
+    let html = "";
 
     products.forEach(product => {
         html += `
@@ -23,12 +23,10 @@ function displayProducts() {
         `;
     });
 
-    html += '</div>';
-
-    container.innerHTML += html;
+    container.innerHTML = html;
 }
 
-// CLICK EVENT + localStorage
+// ADD TO CART (localStorage + event)
 document.addEventListener("click", function(e) {
     if (e.target.classList.contains("buy-btn")) {
 
@@ -38,11 +36,11 @@ document.addEventListener("click", function(e) {
 
         localStorage.setItem("cart", JSON.stringify(cart));
 
-        alert("Item added!");
+        alert("Item added to cart!");
     }
 });
 
-// CONDITION FUNCTION
+// CHECK CART (conditional)
 function checkCart() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -51,6 +49,23 @@ function checkCart() {
     } else {
         console.log("Cart is empty");
     }
+}
+
+// FORM HANDLING
+const form = document.getElementById("contact-form");
+
+if (form) {
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+
+        if (name === "") {
+            alert("Please enter your name");
+        } else {
+            alert(`Thank you, ${name}! Your message has been sent.`);
+        }
+    });
 }
 
 // RUN FUNCTIONS
