@@ -1,14 +1,11 @@
-// PRODUCTS ARRAY (objects)
 const products = [
-    { name: "Silver Ring", price: 25 },
-    { name: "Silver Necklace", price: 40 },
-    { name: "Silver Bracelet", price: 30 }
+    { name: "Silver Ring", price: 25, image: "images/ring.webp" },
+    { name: "Silver Necklace", price: 40, image: "images/necklace.webp" },
+    { name: "Silver Bracelet", price: 30, image: "images/bracelet.webp" }
 ];
 
-// DISPLAY PRODUCTS
 function displayProducts() {
     const container = document.getElementById("product-list");
-
     if (!container) return;
 
     let html = "";
@@ -16,9 +13,10 @@ function displayProducts() {
     products.forEach(product => {
         html += `
             <div class="product">
+                <img src="${product.image}" alt="${product.name}" loading="lazy">
                 <h3>${product.name}</h3>
                 <p>$${product.price}</p>
-                <button class="buy-btn">Buy</button>
+                <button class="buy-btn" data-name="${product.name}">Buy</button>
             </div>
         `;
     });
@@ -26,21 +24,20 @@ function displayProducts() {
     container.innerHTML = html;
 }
 
-// ADD TO CART (localStorage + event)
 document.addEventListener("click", function(e) {
     if (e.target.classList.contains("buy-btn")) {
 
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-        cart.push("item");
+        const name = e.target.dataset.name;
+        cart.push(name);
 
         localStorage.setItem("cart", JSON.stringify(cart));
 
-        alert("Item added to cart!");
+        alert(`${name} added to cart!`);
     }
 });
 
-// CHECK CART (conditional)
 function checkCart() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -51,7 +48,6 @@ function checkCart() {
     }
 }
 
-// FORM HANDLING
 const form = document.getElementById("contact-form");
 
 if (form) {
@@ -68,6 +64,5 @@ if (form) {
     });
 }
 
-// RUN FUNCTIONS
 document.addEventListener("DOMContentLoaded", displayProducts);
 checkCart();
