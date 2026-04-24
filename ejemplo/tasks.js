@@ -5,5 +5,14 @@ const taskList = document.getElementById('taskList');
 addBtn.addEventListener("click", addTask);
 
 function addTask() {
-    console.log("Button clicked");
+  const taskText = input.value;
+
+  if (taskText === "") return;
+
+  const li = document.createElement("li");
+  li.textContent = taskText;
+
+  taskList.appendChild(li);
+
+  input.value = "";
 }
