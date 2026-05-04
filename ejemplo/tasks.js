@@ -16,3 +16,5 @@ function addTask() {
 
   input.value = "";
 }
+const deleteBtn = document.createElement("button");
+deleteBtn.textContent = "X";
